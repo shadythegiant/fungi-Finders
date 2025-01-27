@@ -1,0 +1,158 @@
+@layer components {
+  // header styling
+
+  .header {
+    padding-block: 1rem;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    // hamburger button styling
+
+    [aria-controls="primary-navigation"] {
+      z-index: 100;
+      background: transparent;
+      cursor: pointer;
+      border: 0;
+      display: none;
+      // resting the border radius
+      img {
+        border-radius: 0;
+      }
+    }
+    &__primary-navigation {
+      transition: all 0.3s ease-in;
+      // list
+      ul {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      // media
+
+      @media (width < 760px) {
+        opacity: 1;
+        transition: all 0.4s ease-in;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+        font-family: var(--ff-heading);
+        background-color: var(--background-accent-main);
+        padding: 2rem;
+        border-bottom-left-radius: var(--border-radius-3);
+
+        ul {
+          flex-direction: column;
+          gap: 0;
+          transition: all 0.3s ease-in;
+
+          li + li {
+            border-top: 2px solid var(--background-accent-light);
+            padding-block-start: 1.5rem;
+            margin-block-start: 1.5rem;
+          }
+        }
+      }
+    }
+    @media (width < 760px) {
+      [aria-expanded="false"] + &__primary-navigation {
+        display: none;
+        opacity: 0;
+      }
+      [aria-controls="primary-navigation"] {
+        display: block;
+      }
+    }
+  }
+
+  // hamburger functionality class
+
+  // Hero Styling
+
+  .hero {
+    text-align: center;
+    font-size: var(--font-size-md);
+    color: var(--text-high-contrast);
+    background-image: url(/assets/hero.webp);
+    background-size: cover;
+    background-position: center;
+
+    // title
+    &__header {
+      span {
+        display: block;
+        font-size: var(--font-size-heading-xl);
+        color: var(--text-brand);
+      }
+    }
+  }
+
+  // Card styling
+  .card {
+    padding: 1rem;
+    background-color: var(--background-light);
+    border-radius: var(--border-radius-3);
+    display: grid;
+    gap: var(--grid-flow-space, 1rem);
+    img {
+      border-radius: var(--border-radius-2);
+    }
+
+    &__title {
+      color: var(--card-title-color, var(--text-brand));
+      font-size: var(--card-title-font-size, var(--font-size-heading-sm));
+    }
+  }
+
+  // button styling
+  .button {
+    display: inline flex;
+    cursor: pointer;
+    font-family: var(--ff-heading);
+    font-weight: 700;
+    font-size: var(--font-size-md);
+    text-decoration: none;
+    background-color: var(--background-accent-main);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-1);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--background-accent-light);
+      color: var(--text-high-contrast);
+    }
+  }
+
+  // footer styling
+  .footer {
+    text-align: center;
+    background-color: var(--background-dark);
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    p {
+      font-size: var(--font-size-md);
+      font-family: var(--ff-heading);
+      font-weight: bold;
+    }
+    a {
+      text-decoration: none;
+      color: var(--text-main);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--clr-white);
+      }
+    }
+  }
+}
