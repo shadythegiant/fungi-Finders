@@ -32,7 +32,7 @@ This project was built to practice and demonstrate core frontend development ski
 ## Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices.
-- **Search and Filter**: Easily find fungi by name, type, or habitat.
+- ** Filter**: Easily find fungi by season or toxicity.
 - **Interactive UI**: Smooth animations and transitions for a delightful user experience.
 - **Accessible**: Built with accessibility in mind, ensuring all users can enjoy the site.
 
