@@ -22,7 +22,7 @@ Fungi Finders is a web application that allows users to:
 
 - Browse a collection of fungi species.
 - Learn about their characteristics, habitats, and uses.
-- Search and filter fungi by name, type, or habitat.
+- Search and filter fungi by season, or whether is edible or toxic.
 - Enjoy a clean, responsive, and user-friendly interface.
 
 This project was built to practice and demonstrate core frontend development skills, including semantic HTML, CSS styling, and JavaScript interactivity.
