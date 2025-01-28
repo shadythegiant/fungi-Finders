@@ -1,3 +1,6 @@
+@view-transitions {
+  navigation: auto;
+}
 @layer resets {
   *,
   *::before,
@@ -397,7 +400,8 @@
   @media (width < 760px) {
     .header__primary-navigation {
       opacity: 1;
-      transition: all 0.4s ease-in;
+      transition: all 0.4s ease-in-out;
+      transition-behavior: allow-discrete;
       z-index: 10;
       position: absolute;
       top: 0;

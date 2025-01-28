@@ -28,12 +28,23 @@ const currentFilter = {
   season: "all",
   edible: "all",
 };
+// adding view transitions to cards 
+
+cards.forEach((card, index) => {
+  const musID = `mush-${index +1}`; 
+  card.style.viewTransitionName = `card${musID}`; 
+})
 
 function updatefilter(e) {
   const filterType = e.target.name;
   currentFilter[filterType] = e.target.value;
   console.log(currentFilter);
-  filterCards();
+  // 
+  if(!document.startViewTransition()) {
+    filterCards()
+  }
+  document.startViewTransition( () => filterCards())
+;
 }
 
 function filterCards() {
