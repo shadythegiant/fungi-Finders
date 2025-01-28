@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss style.css -w"
+    "compile:sass": "sass sass/main.scss style.css -w", 
+    "live" : "live-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "live-server": "^1.2.0",
     "sass": "^1.83.4"
   }
 }

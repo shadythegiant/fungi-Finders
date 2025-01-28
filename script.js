@@ -22,6 +22,7 @@ navToggle.addEventListener("click", () => {
 const cards = document.querySelectorAll(".mushroom-guide .card");
 const seasonalFilter = document.getElementById("season");
 const edibleFilter = document.getElementById("edible");
+const noMatch = document.querySelector('.no-match')
 
 const currentFilter = {
   season: "all",
@@ -36,6 +37,8 @@ function updatefilter(e) {
 }
 
 function filterCards() {
+
+  let hasVisibleCards = false; 
   cards.forEach((card) => {
     const season = card.querySelector("[data-season]").dataset.season;
     const edible = card.querySelector("[data-edible]").dataset.edible;
@@ -47,8 +50,15 @@ function filterCards() {
       (currentFilter.edible === "all" || currentFilter.edible === edible)
     ) {
       card.hidden = false;
+      hasVisibleCards = true; 
     } else {
       card.hidden = true;
+    }
+
+    if(hasVisibleCards) {
+      noMatch.hidden  = true; 
+    } else  {
+      noMatch.hidden = false; 
     }
   });
 }
