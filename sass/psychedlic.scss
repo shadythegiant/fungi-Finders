@@ -7,6 +7,16 @@
   height: 90vh;
   margin-top: -5rem;
 
+  //   1000px
+  @media (width < 1000px) {
+    height: 60vh;
+  }
+
+  // 760
+  @media (width < 760px) {
+    height: 40vh;
+  }
+
   video {
     min-width: 100%;
     max-width: 100%;
@@ -37,6 +47,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  //   fixing the font size of the specific hero header
+  @media (width < 1000px) {
+    .hero__header {
+      font-size: var(--font-size-heading-sm);
+
+      span {
+        font-size: var(--font-size-heading-md);
+      }
+    }
+  }
+  @media (width < 760px) {
+    .hero__header {
+      font-size: var(--font-size-heading-sm);
+
+      span {
+        font-size: var(--font-size-heading-md);
+      }
+    }
+  }
 }
 
 .header.psychedlic {

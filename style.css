@@ -502,6 +502,16 @@
   height: 90vh;
   margin-top: -5rem;
 }
+@media (width < 1000px) {
+  .Psychedlic__hero {
+    height: 60vh;
+  }
+}
+@media (width < 760px) {
+  .Psychedlic__hero {
+    height: 40vh;
+  }
+}
 .Psychedlic__hero video {
   min-width: 100%;
   max-width: 100%;
@@ -530,6 +540,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (width < 1000px) {
+  .Psychedlic__overlay .hero__header {
+    font-size: var(--font-size-heading-sm);
+  }
+  .Psychedlic__overlay .hero__header span {
+    font-size: var(--font-size-heading-md);
+  }
+}
+@media (width < 760px) {
+  .Psychedlic__overlay .hero__header {
+    font-size: var(--font-size-heading-sm);
+  }
+  .Psychedlic__overlay .hero__header span {
+    font-size: var(--font-size-heading-md);
+  }
 }
 
 .header.psychedlic {
