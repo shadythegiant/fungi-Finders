@@ -572,6 +572,16 @@
   object-fit: cover;
   object-position: center center;
 }
+@media (width < 1000px) {
+  .card-psych img {
+    height: 100%;
+  }
+}
+@media (width < 760px) {
+  .card-psych img {
+    height: 100%;
+  }
+}
 .card-psych__title {
   color: var(--card-title-color, var(--text-brand));
   font-size: var(--card-title-font-size, var(--font-size-heading-sm));
