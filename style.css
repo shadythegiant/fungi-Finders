@@ -502,19 +502,10 @@
   height: 90vh;
   margin-top: -5rem;
 }
-@media (width < 1000px) {
-  .Psychedlic__hero {
-    height: 60vh;
-  }
-}
-@media (width < 760px) {
-  .Psychedlic__hero {
-    height: 40vh;
-  }
-}
 .Psychedlic__hero video {
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 100% !important;
+  max-width: 100% !important;
+  max-width: none !important;
   z-index: -1;
   /* Setting width & height to auto prevents the browser from stretching or squishing the video */
   width: auto;

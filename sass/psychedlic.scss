@@ -8,18 +8,19 @@
   margin-top: -5rem;
 
   //   1000px
-  @media (width < 1000px) {
-    height: 60vh;
-  }
+  // @media (width < 1000px) {
+  //   height: 60vh;
+  // }
 
-  // 760
-  @media (width < 760px) {
-    height: 40vh;
-  }
+  // // 760
+  // @media (width < 760px) {
+  //   height: 40vh;
+  // }
 
   video {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    max-width: none !important;
 
     z-index: -1;
     /* Setting width & height to auto prevents the browser from stretching or squishing the video */
